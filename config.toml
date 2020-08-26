@@ -1,0 +1,6 @@
+baseURL = "http://mephistophelius.com"
+languageCode = "ru-RU"
+title = "Блог Сэма Булатова"
+
+[taxonomies]
+  tag = "tags"

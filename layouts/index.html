@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body class='body'>
+<header class='header is-has-max-width'>
+  <div class="logo-container">
+    <a href="/" class="logo-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2000px-Angular_full_color_logo.svg.png" alt="Логотип">
+    </a>
+  </div>
+
+  <nav class="menu-container">
+    <ul class='menu-list is-horizontal-list'>
+      <li class='menu-item'>
+        <a href="/">Статьи</a>
+      </li>
+      <li class='menu-item'>
+        <a href="/">Доклады</a>
+      </li>
+      <li class='menu-item'>
+        <a href="/">Проекты</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!--<div class="serach-container">
+    <input class='search-input' type="search" name="search" placeholder="Тот кто ищет всегда найдет...">
+  </div>-->
+</header>
+
+<main class='main is-has-max-width'>
+
+  <section class="section articles-section">
+    <h2 class="section-title">Статьи</h2>
+
+    <section class="section article-list">
+      <h3 class="section-title">Актуальное</h3>
+      <ul class="article-list without-list-style">
+        {{ range first 5 .Pages.ByLastmod }}
+          <li>
+            <time datetime="{{ time .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+            <span class="separator">:</span>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="section tags">
+      <h3 class="section-title">Теги</h3>
+      <ul class="tag-list is-horizontal-list">
+        {{ range .Site.Taxonomies.tags.Alphabetical }}
+          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <!-- .Count --> </li>
+        {{ end }}
+      </ul>
+    </section>
+  </section>
+
+  <section class="section talks">
+    <h2 class="section-title">Доклады</h2>
+
+    <ul class="talk-list is-horizontal-list without-list-style">
+      <li>
+        <time>2010-01-28</time>
+        <span>:</span>
+        <a href="#">Семь будущих чудес CSS</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section projects-section">
+    <h2 class="section-title">Проекты</h2>
+
+    <ul class="project-list without-list-style">
+      <li>
+        <a href="#">RxJS RU</a>:
+        <span>Перевод документации по RxJS на русский язык</span>
+      </li>
+
+      <li>
+        <a href="#">Cataclysm</a>:
+        <span>Typescript library for interactive maps</span>
+      </li>
+    </ul>
+  </section>
+
+
+</main>
+
+<footer class='footer is-has-max-width'>
+  <p>&copy; 2020; Работает на <a href="https://gohugo.io">Hugo</a> :: Автор <a href="#">Сэм Булатов</a></p>
+</footer>
+</body>
+</html>
