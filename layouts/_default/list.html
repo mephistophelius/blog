@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="section article-list">
+  <h3 class="section-title">Актуальное</h3>
+  <ul class="article-list without-list-style">
+    {{ range first 5 .Pages.ByLastmod }}
+      <li>
+        <time datetime="{{ time .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+        <span class="separator">:</span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

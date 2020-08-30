@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+  <div class="article-header">
+    <h1 class="article-title">{{ .Title }}</h1>
+
+    <div class="article-info">
+      <time class="article-publish-time">2019-05-10</time>
+      [Обновлено: <time class="artile-update-time">2019-09-03</time>]
+      ::
+      <span class="article-author">Сэм Булатов</span>
+    </div>
+
+    <div class="article-tags">
+      <ul class="article-tag-list is-horizontal-list">
+
+        <li><a href="#">css</a></li>
+        <li><a href="#">html</a></li>
+        <li><a href="#">javascript</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    {{ .Content }}
+  </div>
+
+{{ end }}
