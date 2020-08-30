@@ -1,5 +1,6 @@
 baseURL: 'https://yetanotherblog.me'
 languageCode: ru-RU
 title: Блог Сэма Булатова
+enableEmoji: true
 taxonomies:
   tag: tags

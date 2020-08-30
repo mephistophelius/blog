@@ -251,5 +251,6 @@ ol.without-list-style li::before {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   border: 1px solid #302d3f;
-  background: transparent;
+  background: transparent !important;
+  padding: .5em;
 }

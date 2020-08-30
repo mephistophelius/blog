@@ -424,12 +424,6 @@ code, samp, time {
   font-size: 1em;
 }
 
-pre > code {
-  padding: 10px;
-  display: block;
-  overflow-x: auto;
-}
-
 var {
   color: var(--variable);
   font-style: normal;

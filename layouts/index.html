@@ -43,15 +43,13 @@
   <h2 class="section-title">Проекты</h2>
 
   <ul class="project-list without-list-style">
-    <li>
-      <a href="#">RxJS RU</a>:
-      <span>Перевод документации по RxJS на русский язык</span>
-    </li>
-
-    <li>
-      <a href="#">Cataclysm</a>:
-      <span>Typescript library for interactive maps</span>
-    </li>
+    {{ range $.Site.Data.projects }}
+      {{ $project := . }}
+      <li>
+        <a href="{{ $project.url }}">{{ $project.name }}</a>:
+        <span>{{ $project.description }}</span>
+      </li>
+    {{ end }}
   </ul>
 </section>
 
