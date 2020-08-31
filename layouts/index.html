@@ -31,11 +31,14 @@
   <h2 class="section-title">Доклады</h2>
 
   <ul class="talk-list is-horizontal-list without-list-style">
-    <li>
-      <time>2010-01-28</time>
-      <span>:</span>
-      <a href="#">Семь будущих чудес CSS</a>
-    </li>
+    {{ range $.Site.Data.talks }}
+      {{ $talk := . }}
+      <li>
+        <time datetime="{{ $talk.date }}">{{ $talk.date }}</time>
+        <span>:</span>
+        <a href="/talks/#{{ $talk.id }}">{{ $talk.title }}</a>
+      </li>
+    {{ end }}
   </ul>
 </section>
 

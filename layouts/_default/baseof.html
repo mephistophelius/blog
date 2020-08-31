@@ -32,15 +32,11 @@
   
     <nav class="menu-container">
       <ul class='menu-list is-horizontal-list'>
+        {{ range .Site.Menus.main }}
         <li class='menu-item'>
-          <a href="/">Статьи</a>
+          <a href="{{ .URL }}">{{ .Name }}</a>
         </li>
-        <li class='menu-item'>
-          <a href="/">Доклады</a>
-        </li>
-        <li class='menu-item'>
-          <a href="/">Проекты</a>
-        </li>
+        {{ end }}
       </ul>
     </nav>
   

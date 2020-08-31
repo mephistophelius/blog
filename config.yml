@@ -4,3 +4,12 @@ title: Блог Сэма Булатова
 enableEmoji: true
 taxonomies:
   tag: tags
+
+menu:
+  main:
+  - name: Статьи
+    url: posts
+  - name: Доклады
+    url: talks
+  - name: Проекты
+    url: projects
