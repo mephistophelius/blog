@@ -8,8 +8,8 @@ taxonomies:
 menu:
   main:
   - name: Статьи
-    url: posts
+    url: /posts
   - name: Доклады
-    url: talks
+    url: /talks
   - name: Проекты
-    url: projects
+    url: /projects
