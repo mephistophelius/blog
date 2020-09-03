@@ -126,6 +126,12 @@ Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
 
+### Картинки { #pictures }
+
+![](cat.png)
+
+- [x] hello
+- [ ] hi
 
 ### Lists
 

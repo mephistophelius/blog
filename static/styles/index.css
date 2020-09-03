@@ -123,6 +123,14 @@ mark {
   border-radius: 0;
 }
 
+input[type="checkbox"] {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid var(--main-color);
+  width: 10px;
+  height: 10px;
+}
+
 .article-title {
   position: relative;
   margin: 0.3rem 0 1.5rem 0;
@@ -253,4 +261,8 @@ pre[class*="language-"] {
   border: 1px solid #302d3f;
   background: transparent !important;
   padding: .5em;
+}
+
+.logo-container img {
+  width: 50px;
 }

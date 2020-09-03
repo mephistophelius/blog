@@ -11,6 +11,8 @@
       {{ end }}
     </title>
 
+    <link rel="shortcut icon" href="images/logo.svg">
+
     <link rel="stylesheet" href="/styles/base.css">
     {{ if .IsPage }}
     <link rel="stylesheet" href="/styles/prism.css">
@@ -22,14 +24,14 @@
     {{ end }}
   </head>
 <body class='body line-numbers'>
-  
+
   <header class='header is-has-max-width'>
     <div class="logo-container">
       <a href="/" class="logo-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2000px-Angular_full_color_logo.svg.png" alt="Логотип">
+        <img src="images/logo.svg" alt="Логотип">
       </a>
     </div>
-  
+
     <nav class="menu-container">
       <ul class='menu-list is-horizontal-list'>
         {{ range .Site.Menus.main }}
@@ -39,7 +41,7 @@
         {{ end }}
       </ul>
     </nav>
-  
+
     <!--<div class="serach-container">
       <input class='search-input' type="search" name="search" placeholder="Тот кто ищет всегда найдет...">
     </div>-->
@@ -51,6 +53,6 @@
   </main>
 
   <footer class='footer is-has-max-width'>
-    <p>&copy; 2020; Работает на <a href="https://gohugo.io">Hugo</a> :: Автор <a href="#">Сэм Булатов</a></p>
+    <p>&copy; 2020; Работает на <a href="https://gohugo.io">Hugo</a> :: Автор <a href="https://github.com/mephistophelius">Сэм Булатов</a></p>
   </footer>
 </body>
