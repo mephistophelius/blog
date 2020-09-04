@@ -305,3 +305,19 @@ h5:hover .title-anchor,
 h6:hover .title-anchor {
   visibility: visible;
 }
+
+.article-content > * {
+  margin-inline: 5vw;
+}
+
+.article-content .highlight {
+  margin-inline: 0;
+}
+
+.article-content figure {
+  margin-inline: 0;
+}
+
+.article-table-of-content {
+  padding-inline: 5vw;
+}
