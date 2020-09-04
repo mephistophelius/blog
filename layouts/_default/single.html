@@ -29,7 +29,9 @@
 {{ end }}
 
 <section class='article-content'>
-  {{ .Content }}
+  {{- with .Content -}}
+  {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="title-anchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
+  {{- end -}}
 </section>
 
 {{ if .Params.commentsEnable }}
