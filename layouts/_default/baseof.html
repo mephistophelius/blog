@@ -57,4 +57,8 @@
   <footer class='footer is-has-max-width'>
     <p>&copy; 2020; Работает на <a href="https://gohugo.io">Hugo</a> :: Автор <a href="https://github.com/mephistophelius">Сэм Булатов</a></p>
   </footer>
+  {{ if .IsPage }}
+  <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script>mediumZoom('.zoomable img')</script>
+  {{ end }}
 </body>
