@@ -1,6 +1,6 @@
 baseURL: 'https://yetanotherblog.me'
 languageCode: ru-RU
-title: Блог Сэма Булатова
+title: Еще один блог
 enableEmoji: true
 taxonomies:
   tag: tags
@@ -9,7 +9,7 @@ menu:
   main:
   - name: Статьи
     url: /posts
-  - name: Доклады
-    url: /talks
-  - name: Проекты
-    url: /projects
+#  - name: Доклады
+#    url: /talks
+#  - name: Проекты
+#    url: /projects
