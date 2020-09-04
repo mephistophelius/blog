@@ -21,24 +21,28 @@
   {{ end }}
 </section>
 
-<section class="article-table-of-content">
-  <h2>Содержание</h2>
-  {{ .TableOfContents }}
-</section>
+{{ if .Params.tableOfContentsEnable }}
+  <section class="article-table-of-content">
+    <h2>Содержание</h2>
+    {{ .TableOfContents }}
+  </section>
+{{ end }}
 
 <section class='article-content'>
   {{ .Content }}
 </section>
 
-<section class="comments">
-  <script src="https://utteranc.es/client.js"
-          repo="mephistophelius/blog"
-          issue-term="pathname"
-          label="Комментарий"
-          theme="github-dark"
-          crossorigin="anonymous"
-          async>
-  </script>
-</section>
+{{ if .Params.commentsEnable }}
+  <section class="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="mephistophelius/blog"
+            issue-term="pathname"
+            label="Комментарий"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+{{ end }}
 
 {{ end }}

@@ -131,6 +131,17 @@ input[type="checkbox"] {
   height: 10px;
 }
 
+figure {
+  margin: 0;
+}
+figcaption > p {
+  margin: 0;
+}
+figcaption {
+  color: #808080;
+  text-align: center;
+}
+
 .article-title {
   position: relative;
   margin: 0.3rem 0 1.5rem 0;
@@ -254,6 +265,15 @@ ol.without-list-style li::before {
 
 .article-tag-list li {
   margin-inline-end: 1rem;
+}
+
+.article-table-of-content nav > ul {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 1rem;
+}
+.article-table-of-content nav > ul ul {
+  padding-inline-start: 1rem;
 }
 
 :not(pre) > code[class*="language-"],

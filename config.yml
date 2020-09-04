@@ -13,3 +13,7 @@ menu:
 #    url: /talks
 #  - name: Проекты
 #    url: /projects
+
+markup:
+  tableOfContents:
+    ordered: false
