@@ -13,6 +13,31 @@ can [see the source for it by adding '.text' to the URL](/projects/markdown/synt
 
 ----
 
+::: tip
+hello
+:::
+
+::: warning
+hello
+:::
+
+::: error
+hello
+:::
+
+::: note
+### Hello
+
+this is text
+
+- list item1
+- list item 2
+:::
+
+&&& hello wordl
+content
+&&&
+
 ## Overview
 
 ### Philosophy
@@ -267,11 +292,16 @@ tell application "Foo"
 end tell
 ```
 
-```ts
+```ts{2}
 function hello(): string {
   return 'Hello'
 }
 ```
+
+<details>
+  <summary>hello</summary>
+  there
+</details>
 
 ## Span Elements
 

@@ -321,3 +321,53 @@ h6:hover .title-anchor {
 .article-table-of-content {
   padding-inline: 5vw;
 }
+
+pre, code, .blob-code-inner {
+  overflow-x: auto;
+}
+
+.alert {
+  padding: 1px 1.2rem;
+  border-inline-start-width: 3px;
+  border-inline-start-style: solid;
+  border-inline-start-color: var(--border-color, #fff);
+  background-color: var(--background-color, transparent);
+  position: relative;
+  margin-block: 1rem;
+}
+
+.alert::before {
+  content: var(--icon);
+  background: var(--border-color);
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-size: 0.8em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-58%, -50%);
+}
+
+.alert.note {
+  --border-color:      hsl(244.7, 76.8%, 54.3%);
+  --background-color: hsla(244.7, 76.8%, 54.3%, 0.23);
+  --icon: '📄';
+}
+
+.alert.tip {
+  --border-color:      hsl(45.2, 74.9%, 50%);
+  --background-color: hsla(45.2, 74.9%, 50%, 0.23);
+  --icon: '🔎';
+}
+
+.alert.warning {
+  --border-color:      hsl(25.5, 76.8%, 54.3%);
+  --background-color: hsla(25.5, 76.8%, 54.3%, 0.23);
+  --icon: '⚠️';
+}
+
+.alert.error {
+  --border-color:      hsl(0, 65.9%, 58.6%);
+  --background-color: hsla(0, 65.9%, 58.6%, 0.32);
+  --icon: '⛔️';
+}
