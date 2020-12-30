@@ -34,6 +34,8 @@ layout: layouts/base.njk
   {{ content | safe }}
 </section>
 
+{% if commentsEnable %}
 <section class="comments">
   {% comments %}
 </section>
+{% endif %}

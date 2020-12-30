@@ -5,6 +5,7 @@ createDate: 2020-08-29T17:05:16+03:00
 author: "Сэм Булатов"
 tags:
   - css
+commentsEnable: true
 ---
 
 **Note:** This document is itself written using Markdown; you
