@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Доклады",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/talk"
+  },
+  "definitions": {
+    "talk": {
+      "type": "object",
+      "description": "Данные о докладе",
+      "required": [ "title", "id", "urls", "date", "conference", "location" ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Уникальная строка доклада"
+        },
+        "title": {
+          "type": "string",
+          "description": "Название доклада"
+        },
+        "urls": {
+          "type": "object",
+          "description": "Ссылки",
+          "properties": {
+            "video": {
+              "type": "string",
+              "description": "Ссылка на видеозапись доклада"
+            },
+            "article": {
+              "type": "string",
+              "description": "Ссылка на текстовую расшифровку доклада"
+            },
+            "slides": {
+              "type": "string",
+              "description": "Ссылка на слайды"
+            }
+          }
+        },
+        "date": {
+          "type": "string",
+          "description": "Дата выступления в ISO8601 формате"
+        },
+        "conference": {
+          "type": "object",
+          "description": "Данные о конференции",
+          "required": [ "url", "name" ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Название конференции"
+            },
+            "url": {
+              "type": "string",
+              "description": "Ссылка на доклад на сайте конференции"
+            }
+          }
+        },
+        "location": {
+          "type": "object",
+          "description": "Место проведения конференции",
+          "required": [ "city", "country" ],
+          "properties": {
+            "country": {
+              "type": "string",
+              "description": "Название страны проведения"
+            },
+            "city": {
+              "type": "string",
+              "description": "Название города проведения"
+            }
+          }
+        }
+      }
+    }
+  }
+}

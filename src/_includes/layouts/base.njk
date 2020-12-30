@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+
+    <meta name="description" content="{{ description or metadata.description }}">
+
+    <link rel="shortcut icon" href="{{ '/static/images/logo.svg' | url }}">
+    <link rel="stylesheet" href="{{ '/static/styles/base.css' | url }}">
+    <link rel="stylesheet" href="{{ '/static/styles/index.css' | url }}">
+
+    <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>mediumZoom('.zoomable img');</script>
+  </head>
+  <body class='body'>
+    <header class='header is-has-max-width'>
+      <div class="logo-container">
+        <a href="/" class="logo-link">
+          <img src="{{ '/static/images/logo.svg' | url }}" alt="Логотип">
+        </a>
+      </div>
+
+      <nav class="menu-container">
+      </nav>
+
+      <!--<div class="serach-container">
+        <input class='search-input' type="search" name="search" placeholder="Тот кто ищет всегда найдет...">
+      </div>-->
+    </header>
+
+    <main class='main is-has-max-width'>
+      {{ content | safe }}
+    </main>
+
+    <footer class='footer is-has-max-width'>
+      <p>&copy; 2021; Работает на <a href="https://11ty.dev">11ty</a> :: Автор <a href="https://github.com/mephistorine">Сэм Mephistorine Булатов</a></p>
+    </footer>
+  </body>
+</html>
