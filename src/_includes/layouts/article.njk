@@ -6,13 +6,17 @@ layout: layouts/base.njk
   <h1 class="article-title">{{ title }}</h1>
 
   <div class="article-info">
-    <time class="article-publish-time" datetime="{{ createDate | date }}">{{ createDate | date }}</time>
+    <time class="article-publish-time" datetime="{{ date | date }}">{{ date | date }}</time>
+    {% if lastModifyDate %}
     <span>[</span>
     <span>Обновлено: </span>
-    <time class="artiсle-update-time" datetime="{{ page.date | date }}">{{ page.date | date }}</time>
+    <time class="artiсle-update-time" datetime="{{ lastModifyDate | date }}">{{ lastModifyDate | date }}</time>
     <span>]</span>
+    {% endif %}
+    {% if author %}
     <span>::</span>
     <span class="article-author">{{ author }}</span>
+    {% endif %}
   </div>
 
   {% if tags %}

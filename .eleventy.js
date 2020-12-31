@@ -11,7 +11,7 @@ function buildEleventyConfig(config) {
   
   config.addLayoutAlias('article', 'layouts/article.njk');
   
-  config.addDataExtension('yaml', (content) => YAML.parse(content))
+  config.addDataExtension('yaml', (content) => YAML.parse(content));
   
   config.addNunjucksFilter('date', (date) => {
     if (date instanceof Date) {
@@ -63,12 +63,12 @@ function buildEleventyConfig(config) {
     templateCollection.getAll().forEach((item) => {
       if ('tags' in item.data) {
         for (const tagName of item.data.tags) {
-          tags.add(tagName)
+          tags.add(tagName);
         }
       }
-    })
+    });
     
-    return Array.from(tags.values())
+    return Array.from(tags.values());
   });
   
   // userConfig.addPlugin(syntaxHighlight);
