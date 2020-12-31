@@ -1,6 +1,8 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const dateFns = require('date-fns');
-const YAML = require('yaml')
+const YAML = require('yaml');
+const markdownIt = require('markdown-it')
+const markdownItTitleAnchor = require('markdown-it-anchor')
 
 /**
  * @param {UserConfig} config Конфигурация
@@ -74,6 +76,20 @@ function buildEleventyConfig(config) {
   // userConfig.addPlugin(syntaxHighlight);
   
   config.addPassthroughCopy('static');
+  
+  const markdownParser = markdownIt({
+    html: true,
+    linkify: true,
+    typographer: true
+  })
+  
+  markdownParser.use(markdownItTitleAnchor, {
+    permalink: true,
+    permalinkClass: "title-anchor",
+    permalinkSymbol: "⌗"
+  })
+  
+  config.setLibrary('md', markdownParser)
   
   return {
     dir: {
