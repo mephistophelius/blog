@@ -1,5 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const dateFns = require('date-fns');
+const YAML = require('yaml')
 
 /**
  * @param {UserConfig} config Конфигурация
@@ -9,6 +10,8 @@ function buildEleventyConfig(config) {
   config.setDataDeepMerge(true);
   
   config.addLayoutAlias('article', 'layouts/article.njk');
+  
+  config.addDataExtension('yaml', (content) => YAML.parse(content))
   
   config.addNunjucksFilter('date', (date) => {
     if (date instanceof Date) {
@@ -76,9 +79,7 @@ function buildEleventyConfig(config) {
     dir: {
       input: 'src',
       output: 'dist',
-      dataTemplateEngine: 'njk',
-      includes: "_includes",
-      data: "_data",
+      dataTemplateEngine: 'njk'
     },
     templateFormats: [
       'md',
