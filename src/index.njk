@@ -11,4 +11,41 @@ layout: layouts/base.njk
     {% set articles = collections.articles | head(-3) | reverse %}
     {% include "article-list.component.njk" %}
   </section>
+
+  <section class="section tags">
+    <h3 class="section-title">Метки</h3>
+
+    <ul class="tag-list is-horizontal-list">
+      {% for tag in collections.tags %}
+      <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="section talks">
+    <h2 class="section-title">Доклады</h2>
+
+    <ul class="talk-list is-horizontal-list without-list-style">
+      {% for talk in talks %}
+      <li>
+        <time datetime="{{ talk.date | date }}">{{ talk.date | date }}</time>
+        <span>:</span>
+        <a href="{{ talk.urls.video }}">{{ talk.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</section>
+
+<section class="section projects-section">
+  <h2 class="section-title">Проекты</h2>
+
+  <ul class="project-list without-list-style">
+    {% for project in projects %}
+    <li>
+      <span>{{ project.name }}</span>:
+      <a href="{{ project.url }}">{{ project.description }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
