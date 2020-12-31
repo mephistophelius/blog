@@ -1,8 +1,17 @@
 {
-  "name": "mephistorine-blog",
   "version": "0.0.1",
+  "name": "mephistorine-blog",
+  "description": "Личный блог Сэма Булатова",
+  "homepage": "https://yetanotherblog.me",
   "repository": "git@github.com:mephistorine/blog.git",
-  "author": "Sam Bulatov <stylesam@yandex.ru>",
+  "author": {
+    "name": "Sam Bulatov",
+    "email": "stylesam@yandex.ru",
+    "url": "t.me/mephistorine"
+  },
+  "bugs": {
+    "url": "https://github.com/mephistorine/blog/issues"
+  },
   "license": "MIT",
   "scripts": {
     "build": "eleventy",
@@ -10,7 +19,7 @@
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "date-fns": "^2.16.1"
