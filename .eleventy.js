@@ -8,15 +8,15 @@ function buildEleventyConfig(config) {
   
   config.setDataDeepMerge(true);
   
-  config.addLayoutAlias('post', 'layouts/post.njk');
+  config.addLayoutAlias('article', 'layouts/article.njk');
   
   config.addNunjucksFilter('date', (date) => {
     if (date instanceof Date) {
-      return dateFns.format(date, 'yyyy-MM-dd')
+      return dateFns.format(date, 'yyyy-MM-dd');
     }
     
     if (typeof date === 'string' && dateFns.isMatch(date, 'yyyy-MM-dd')) {
-      return dateFns.format(dateFns.parseISO(date), 'yyyy-MM-dd')
+      return dateFns.format(dateFns.parseISO(date), 'yyyy-MM-dd');
     }
   });
   
@@ -29,7 +29,7 @@ function buildEleventyConfig(config) {
   });
   
   config.addNunjucksShortcode('comments', () => {
-    return`<script
+    return `<script
       src="https://utteranc.es/client.js"
       repo="mephistorine/blog"
       issue-term="pathname"
@@ -37,21 +37,35 @@ function buildEleventyConfig(config) {
       theme="github-dark"
       crossorigin="anonymous"
       async>
-    </script>`
-  })
+    </script>`;
+  });
   
-  config.addCollection('articles', /** @param {TemplateCollection} templateCollection */ (templateCollection) => {
+  config.addCollection('articles', /** @param {TemplateCollection} templateCollection */(templateCollection) => {
     const articles = [];
     
     templateCollection.getAll().forEach((item) => {
       if ('type' in item.data) {
         if (item.data.type === 'article') {
-          articles.push(item)
+          articles.push(item);
+        }
+      }
+    });
+    
+    return articles;
+  });
+  
+  config.addCollection('tags', /** @param {TemplateCollection} templateCollection */(templateCollection) => {
+    const tags = new Set();
+    
+    templateCollection.getAll().forEach((item) => {
+      if ('tags' in item.data) {
+        for (const tagName of item.data.tags) {
+          tags.add(tagName)
         }
       }
     })
     
-    return articles
+    return Array.from(tags.values())
   });
   
   // userConfig.addPlugin(syntaxHighlight);
@@ -62,7 +76,9 @@ function buildEleventyConfig(config) {
     dir: {
       input: 'src',
       output: 'dist',
-      dataTemplateEngine: 'njk'
+      dataTemplateEngine: 'njk',
+      includes: "_includes",
+      data: "_data",
     },
     templateFormats: [
       'md',

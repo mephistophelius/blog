@@ -1,0 +1,23 @@
+{
+  "title": "Еще один блог",
+  "description": "hello",
+  "language": "ru",
+  "menu": [
+    {
+      "label": "Статьи",
+      "path": "/articles"
+    },
+    {
+      "label": "Доклады",
+      "path": "/talks"
+    },
+    {
+      "label": "Проекты",
+      "path": "/projects"
+    },
+    {
+      "label": "Обо мне",
+      "path": "/about"
+    }
+  ]
+}

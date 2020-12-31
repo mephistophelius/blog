@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 ---
 
 <section class="section articles-section">
@@ -8,16 +8,7 @@ layout: layouts/home.njk
   <section class="section article-list">
     <h3 class="section-title">Актуальное</h3>
 
-    <ul class="article-list without-list-style">
-      {% set posts = collections.articles | head(-3) %}
-
-      {% for post in posts | reverse %}
-        <li>
-          <time datetime="{{ post.date | date }}">{{ post.date | date }}</time>
-          <span class="separator">:</span>
-          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% set articles = collections.articles | head(-3) | reverse %}
+    {% include "article-list.component.njk" %}
   </section>
 </section>
