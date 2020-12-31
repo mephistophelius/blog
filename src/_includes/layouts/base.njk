@@ -23,6 +23,13 @@
       </div>
 
       <nav class="menu-container">
+        <ul class='menu-list is-horizontal-list'>
+          {% for menuItem in metadata.menu %}
+          <li class="menu-item">
+            <a href="{{ menuItem.path }}">{{ menuItem.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </nav>
 
       <!--<div class="serach-container">
