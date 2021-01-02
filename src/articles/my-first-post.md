@@ -13,29 +13,31 @@ can [see the source for it by adding '.text' to the URL](/projects/markdown/synt
 
 ----
 
-::: tip
+::: alert tip
 hello
 :::
 
-::: warning
+hi
+
+::: alert warning
 hello
 :::
 
-::: error
+::: alert error
 hello
 :::
 
-::: note
+::: alert note
 ### Hello
 
 this is text
 
 - list item1
-- list item 2
+- list item 
 :::
 
-&&& hello wordl
-content
+&&& spoiler Секрет
+Hi
 &&&
 
 ## Overview
@@ -292,7 +294,11 @@ tell application "Foo"
 end tell
 ```
 
-```ts{2}
+```
+$ npm i @angular/cli
+```
+
+```typescript
 function hello(): string {
   return 'Hello'
 }
@@ -302,6 +308,43 @@ function hello(): string {
   <summary>hello</summary>
   there
 </details>
+
+👽 🥇
+
+```javascript
+const hello = {
+    dir: {
+      input: 'src',
+      output: 'dist',
+      dataTemplateEngine: 'njk'
+    },
+    templateFormats: [
+      'md',
+      'njk',
+      'html',
+      'liquid'
+    ],
+    markdownTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk'
+}
+
+const takeHello = () => hello
+```
+
+$$$
+\\sqrt{3x-1}+(1+x)^
+$$$
+
+## FootNotes [^longnote]
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
 
 ## Span Elements
 

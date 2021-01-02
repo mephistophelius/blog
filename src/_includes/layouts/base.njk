@@ -8,13 +8,15 @@
     <meta name="description" content="{{ description or metadata.description }}">
 
     <link rel="shortcut icon" href="{{ '/static/images/logo.svg' | url }}">
+    <link rel="stylesheet" href="{{ '/static/styles/prism.css' | url }}">
     <link rel="stylesheet" href="{{ '/static/styles/base.css' | url }}">
     <link rel="stylesheet" href="{{ '/static/styles/index.css' | url }}">
 
     <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script src="{{ '/static/scripts/prism.js' | url }}"></script>
     <script>mediumZoom('.zoomable img');</script>
   </head>
-  <body class='body'>
+  <body class='body line-numbers'>
     <header class='header is-has-max-width'>
       <div class="logo-container">
         <a href="/" class="logo-link">
