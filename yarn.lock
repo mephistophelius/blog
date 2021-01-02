@@ -53,6 +53,11 @@
     time-require "^0.1.2"
     valid-url "^1.0.9"
 
+"@gerhobbelt/markdown-it-footnote@^3.0.2-4":
+  version "3.0.2-4"
+  resolved "https://registry.yarnpkg.com/@gerhobbelt/markdown-it-footnote/-/markdown-it-footnote-3.0.2-4.tgz#471780444920151934b98c57a2dc8ef417642662"
+  integrity sha512-ACVg9BBugIHrou9UtnXhxccTh4sls6UoBPsUODtnkbVtR0IzUMySZEVTG2vIHGKgSBZvgIFv82RV+oZQ5k61Sw==
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -1865,6 +1870,16 @@ markdown-it-anchor@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-6.0.1.tgz#f54b78757d0b61455faf8ced775b39498bd6d6f9"
   integrity sha512-8qX4r5R6AtXla9HKCouEQ40inw69O5jR4VUXlZySsBLxIXlsJ3Yi9JV6JWPU4ZdA8jWTGDDJjJYNLwQ0W4jCag==
+
+markdown-it-container@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"
+  integrity sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==
+
+markdown-it-table-of-contents@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.5.1.tgz#e9ca6b1cca9b69660a1b12222372d78b8c9f5a5b"
+  integrity sha512-OrDXtByZpkW7sXlB6PhlTnrqPsNdHffaOGZ2r2jEOWVgKzjK0U+1pHSiknhoqOxrjREtvpxNKROUe5X9QFzi5A==
 
 markdown-it@^10.0.0:
   version "10.0.0"
