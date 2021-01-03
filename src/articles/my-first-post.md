@@ -1,6 +1,6 @@
 ---
 title: "My First Post"
-date: 2020-08-29T17:05:16+03:00
+date: 2020-08-29
 lastModifyDate: 2020-08-29T17:05:16+03:00
 author: "Сэм Булатов"
 tags:
@@ -262,9 +262,11 @@ This is a normal paragraph:
 
 Here is an example of AppleScript:
 
-    tell application "Foo"
-        beep
-    end tell
+```text
+tell application "Foo"
+    beep
+end tell
+```
 
 A code block continues until it reaches a line that is not indented
 (or the end of the article).

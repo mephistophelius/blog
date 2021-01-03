@@ -114,17 +114,29 @@ function buildEleventyConfig(config) {
   });
   
   config.addCollection('tags', /** @param {TemplateCollection} templateCollection */(templateCollection) => {
-    const tags = new Set();
     
+    const tags = [];
+  
     templateCollection.getAll().forEach((item) => {
       if ('tags' in item.data) {
         for (const tagName of item.data.tags) {
-          tags.add(tagName);
+          const tag = tags.find((tag) => tag.name === tagName)
+          
+          if (typeof tag !== 'undefined') {
+            tag.articleCount = tag.articleCount + 1
+            continue
+          }
+        
+          tags.push({
+            name: tagName,
+            articleCount: 1
+          })
         }
+        
       }
     });
     
-    return Array.from(tags.values());
+    return tags;
   });
   
   // userConfig.addPlugin(syntaxHighlight);

@@ -17,7 +17,7 @@ layout: layouts/base.njk
 
     <ul class="tag-list is-horizontal-list">
       {% for tag in collections.tags %}
-      <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+      <li><a href="/tags/{{ tag.name }}">{{ tag.name }}<sup>({{ tag.articleCount }})</sup></a></li>
       {% endfor %}
     </ul>
   </section>

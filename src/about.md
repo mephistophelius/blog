@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Обо мне
-date: 2020-12-31T16:13:34+03:00
+date: 2020-12-31
 commentsEnable: true
 author: Сэм Булатов
 ---
@@ -10,9 +10,9 @@ author: Сэм Булатов
 
 ## Привет
 
-::: spoiler Hello
+&&& spoiler Hello
 I am **here**
-:::
+&&&
 
 ### Test 1
 
