@@ -10,12 +10,10 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/base.njk
 permalink: /tags/{{ tag }}/
-eleventyComputed:
-  tagName: {{ tag }}
 ---
 
 <section>
-  <h1 class="title">Метка: "{{ tagName }}"</h1>
+  <h1 class="title">Метка: "{{ tag }}"</h1>
 </section>
 
 {% set articles = collections[ tag ] | reverse %}
