@@ -3,7 +3,10 @@
   "name": "mephistorine-blog",
   "description": "Личный блог Сэма Булатова",
   "homepage": "https://yetanotherblog.me",
-  "repository": "git@github.com:mephistorine/blog.git",
+  "repository": {
+    "url": "git@github.com:mephistorine/blog.git",
+    "type": "git"
+  },
   "author": {
     "name": "Sam Bulatov",
     "email": "stylesam@yandex.ru",
@@ -17,7 +20,8 @@
     "build": "eleventy",
     "watch": "eleventy --watch",
     "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "ci": "yarn build"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
