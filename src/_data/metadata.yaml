@@ -1,13 +1,26 @@
 # Файл общей конфигурации сайта
-title: "Еще один блог"
-description: hello
+title: Еще один блог
+url: https://yetanotherblog.me
+description: Личный блог Сэма Булатов, здесь я рассказываю о разработке и около IT сфере
 language: ru
+author:
+  name: Сэм Булатов
+  email: mephistorine@gmail.com
+  url: https://yetanotherblog.me
 menu:
-  - label: "Архив"
-    path: "/archive"
-#  - label: "Доклады"
-#    path: "/talks"
-#  - label: "Проекты"
-#    path: "/projects"
-  - label: "Обо мне"
-    path: "/about"
+  - label: Архив
+    path: /archive
+#  - label: Доклады
+#    path: /talks
+#  - label: Проекты
+#    path: /projects
+  - label: Обо мне
+    path: /about
+feed:
+  subtitle: I am writing about my experiences as a naval navel-gazer.
+  filename: feed.xml
+  path: /feed/feed.xml
+  id: https://yetanotherblog.me
+jsonfeed:
+  path: /feed/feed.json
+  url: https://yetanotherblog.me/feed/feed.json

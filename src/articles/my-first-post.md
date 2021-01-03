@@ -1,6 +1,7 @@
 ---
 title: "My First Post"
 date: 2020-08-29T17:05:16+03:00
+lastModifyDate: 2020-08-29T17:05:16+03:00
 author: "Сэм Булатов"
 tags:
   - css
@@ -18,6 +19,7 @@ hello
 :::
 
 hi
+
 
 ::: alert warning
 hello
@@ -133,13 +135,6 @@ example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
 
 ### Картинки { #pictures }
-
-{{< figure
-    src="https://user-images.githubusercontent.com/6137112/43369906-7623239a-9376-11e8-978b-6e089be499fb.gif"
-    caption="Steve Francia"
-    class="zoomable"
->}}
-
 
 - [x] hello
 - [ ] hi
