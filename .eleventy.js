@@ -7,6 +7,7 @@ const markdownItContainer = require('markdown-it-container');
 const markdownItToc = require('markdown-it-table-of-contents');
 const markdownItFootNote = require('@gerhobbelt/markdown-it-footnote');
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItTaskList = require('markdown-it-task-checkbox');
 
 /**
  * @param {UserConfig} config Конфигурация
@@ -138,6 +139,7 @@ function buildEleventyConfig(config) {
   })
     .use(markdownItFootNote)
     .use(markdownItAttrs)
+    .use(markdownItTaskList)
     .use(markdownItToc, {
       includeLevel: [2, 3, 4, 5, 6],
       listType: 'ol',
