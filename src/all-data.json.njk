@@ -1,0 +1,37 @@
+---
+# Metadata comes from _data/metadata.yaml
+permalink: /all-data.json
+eleventyExcludeFromCollections: true
+---
+{
+  "data": {
+    "articles": [
+      {%- for article in collections.articles %}
+      {
+      "slug": "{{ article.fileSlug }}",
+      "url": "{{ article.url | url | absoluteUrl(metadata.url) }}",
+      "title": "{{ article.data.title }}",
+      "contentHtml": {% if article.templateContent %}{{ article.templateContent | dump | safe }}{% else %}null{% endif %},
+      "createDate": "{{ article.date | date }}",
+      "lastModifyDate": "{{ article.lastModifyDate | date }}",
+      "tags": [
+        {% for tag in article.data.tags %}
+          "{{ tag }}"
+        {% endfor %}
+      ]
+      }
+      {%- if not loop.last -%}
+      ,
+      {%- endif -%}
+      {%- endfor %}
+    ],
+    "tags": [
+      {%- for tag in collections.tags %}
+      "{{ tag.name }}"
+      {%- if not loop.last -%}
+      ,
+      {%- endif -%}
+      {%- endfor %}
+    ]
+  }
+}

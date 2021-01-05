@@ -178,11 +178,12 @@ figcaption {
 
 .header {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 60px 1fr 1fr;
   place-items: center;
 }
 
-.menu-container {
+.menu-container,
+.search-container {
   place-self: center flex-end;
 }
 
@@ -382,4 +383,19 @@ pre, code, .blob-code-inner {
 pre code {
   background: transparent;
   color: white;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-results-container {
+  position: absolute;
+  background-color: #2c2748;
+  z-index: 1;
+  padding-inline: 1rem;
+}
+
+.search-result-content ul {
+  padding-inline-start: 1.4rem;
 }

@@ -132,7 +132,6 @@ function buildEleventyConfig(config) {
             articleCount: 1
           })
         }
-        
       }
     });
     

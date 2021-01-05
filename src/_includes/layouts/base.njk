@@ -34,9 +34,10 @@
         </ul>
       </nav>
 
-      <!--<div class="serach-container">
-        <input class='search-input' type="search" name="search" placeholder="Тот кто ищет всегда найдет...">
-      </div>-->
+      <div class="search-container">
+        <input class='search-input' type="text" autocomplete="off" name="search" placeholder="Поиск...">
+        <div class="search-results-container" hidden></div>
+      </div>
     </header>
 
     <main class='main is-has-max-width'>
@@ -53,5 +54,7 @@
         <span>Версия: <a href="#">{{ pkg.version }}</a></span>
         <a href=""></a></p>
     </footer>
+
+    <script src="{{ '/static/scripts/dist/index.js' | url }}"></script>
   </body>
 </html>
