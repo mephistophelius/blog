@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && yarn run build:ts",
     "build:ts": "parcel build static/scripts/index.ts -d static/scripts/dist -t browser",
     "watch": "eleventy --watch",
     "start": "concurrently --prefix '[{name}]' --names 11ty,typescript --prefix-colors 'blue,green' 'yarn run start:11ty' 'yarn run start:ts'",
