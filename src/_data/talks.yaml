@@ -1,0 +1,12 @@
+- id: "seven-future-css"
+  title: "Семь Будущих чудес CSS"
+  urls:
+    slides: "https://wsd.events/2019/04/13/pres/future-css/"
+    video: "https://youtu.be/dcG3BKnVIhg"
+  date: "2019-04-13"
+  conference:
+    name: "Web Standards Days"
+    url: "https://wsd.events/2019/04/13/#future-css"
+  location:
+    country: "Россия"
+    city: "Москва"

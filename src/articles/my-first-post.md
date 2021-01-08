@@ -1,41 +1,45 @@
 ---
 title: "My First Post"
-date: 2020-08-29T17:05:16+03:00
+date: 2020-08-29
+lastModifyDate: 2020-08-29T17:05:16+03:00
 author: "Сэм Булатов"
-tags: [ "css" ]
-draft: false
-tableOfContentsEnable: true
+tags:
+  - css
 commentsEnable: true
 ---
+
 
 **Note:** This document is itself written using Markdown; you
 can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
 
 ----
 
-::: tip
+::: alert tip
 hello
 :::
 
-::: warning
+hi
+
+
+::: alert warning
 hello
 :::
 
-::: error
+::: alert error
 hello
 :::
 
-::: note
+::: alert note
 ### Hello
 
 this is text
 
 - list item1
-- list item 2
+- list item 
 :::
 
-&&& hello wordl
-content
+&&& spoiler Секрет
+Hi
 &&&
 
 ## Overview
@@ -131,13 +135,6 @@ example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
 
 ### Картинки { #pictures }
-
-{{< figure
-    src="https://user-images.githubusercontent.com/6137112/43369906-7623239a-9376-11e8-978b-6e089be499fb.gif"
-    caption="Steve Francia"
-    class="zoomable"
->}}
-
 
 - [x] hello
 - [ ] hi
@@ -265,9 +262,11 @@ This is a normal paragraph:
 
 Here is an example of AppleScript:
 
-    tell application "Foo"
-        beep
-    end tell
+```text
+tell application "Foo"
+    beep
+end tell
+```
 
 A code block continues until it reaches a line that is not indented
 (or the end of the article).
@@ -292,7 +291,11 @@ tell application "Foo"
 end tell
 ```
 
-```ts{2}
+```
+$ npm i @angular/cli
+```
+
+```typescript
 function hello(): string {
   return 'Hello'
 }
@@ -302,6 +305,43 @@ function hello(): string {
   <summary>hello</summary>
   there
 </details>
+
+👽 🥇
+
+```javascript
+const hello = {
+    dir: {
+      input: 'src',
+      output: 'dist',
+      dataTemplateEngine: 'njk'
+    },
+    templateFormats: [
+      'md',
+      'njk',
+      'html',
+      'liquid'
+    ],
+    markdownTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk'
+}
+
+const takeHello = () => hello
+```
+
+$$$
+\\sqrt{3x-1}+(1+x)^
+$$$
+
+## FootNotes [^longnote]
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
 
 ## Span Elements
 

@@ -1,8 +1,0 @@
-[
-  {
-    "$schema": "../static/schemas/projects.schema.json",
-    "name": "RxJS RU",
-    "url": "https://github.com/waliot/rxjs-ru",
-    "description": "Перевод документации по RxJS на русский язык"
-  }
-]

@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+  - all
+  - articles
+  - tags
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+permalink: /tags/{{ tag }}/
+---
+
+<section>
+  <h1 class="title">Метка: "{{ tag }}"</h1>
+</section>
+
+{% set articles = collections[ tag ] | reverse %}
+<section class="section article-list">
+{% include "article-list.component.njk" %}
+</section>

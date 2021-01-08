@@ -1,0 +1,3 @@
+- name: "RxJS RU"
+  url: "https://github.com/waliot/rxjs-ru"
+  description: "Перевод документации RxJS на русский язык"

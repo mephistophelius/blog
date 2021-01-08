@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="article-header">
+  <h1 class="article-title">{{ title }}</h1>
+
+  <div class="article-info">
+    <time class="article-publish-time" datetime="{{ date | date }}">{{ date | date }}</time>
+    {% if lastModifyDate %}
+    <span>[</span>
+    <span>Обновлено: </span>
+    <time class="artiсle-update-time" datetime="{{ lastModifyDate | date }}">{{ lastModifyDate | date }}</time>
+    <span>]</span>
+    {% endif %}
+    {% if author %}
+    <span>::</span>
+    <span class="article-author">{{ author }}</span>
+    {% endif %}
+  </div>
+
+  {% if tags %}
+  <div class="article-tags">
+    <ul class="article-tag-list is-horizontal-list">
+      {% for tag in tags %}
+      <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+
+<section class='article-content'>
+  {{ content | safe }}
+</section>
+
+{% if commentsEnable %}
+<section class="comments">
+  {% comments %}
+</section>
+{% endif %}

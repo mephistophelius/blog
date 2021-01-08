@@ -2,13 +2,13 @@
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans';
-  
+  font-family: 'Open Sans', sans-serif;
+
   --main-hue: 250;
   --main-saturation: 100%;
   --main-lightness: 72%;
   --main-alpha: 1;
-  
+
   --main-color: hsl(
     var(--main-hue),
     var(--main-saturation),
@@ -17,19 +17,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
 }
 
 code, samp, time {
   --main-alpha: .1;
-  
+
   background: hsla(
     var(--main-hue),
     var(--main-saturation),
     var(--main-lightness),
     var(--main-alpha)
   );
-  
+
   color: var(--main-color);
   padding: 2.5px 5px;
   border-radius: 0;
@@ -43,7 +43,7 @@ blockquote > p {
 
 blockquote::before {
   font-family: monospace;
-  content: ">";
+  content: '>';
   display: block;
   color: var(--main-color);
   position: absolute;
@@ -123,7 +123,7 @@ mark {
   border-radius: 0;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   background-color: transparent;
   border-radius: 0;
   border: 2px solid var(--main-color);
@@ -134,9 +134,11 @@ input[type="checkbox"] {
 figure {
   margin: 0;
 }
+
 figcaption > p {
   margin: 0;
 }
+
 figcaption {
   color: #808080;
   text-align: center;
@@ -162,9 +164,9 @@ figcaption {
 
 .article-info {
   --main-alpha: .7;
-  
-  font-family: 'Fira Code', monospace;
-  color: hsla( var(--main-hue), var(--main-saturation), var(--main-lightness), var(--main-alpha) );
+
+  font-family: 'Cascadia Code', 'Fira Code', monospace;
+  color: hsla(var(--main-hue), var(--main-saturation), var(--main-lightness), var(--main-alpha));
   margin-block-end: 0.5rem;
 }
 
@@ -176,11 +178,12 @@ figcaption {
 
 .header {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 60px 1fr 1fr;
   place-items: center;
 }
 
-.menu-container {
+.menu-container,
+.search-container {
   place-self: center flex-end;
 }
 
@@ -188,7 +191,7 @@ figcaption {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  
+
   display: flex;
 }
 
@@ -240,7 +243,7 @@ ol.without-list-style li::before {
 }
 
 .article-list time,
- time {
+time {
   border-radius: 0;
   background-color: initial;
   padding: 0;
@@ -272,15 +275,20 @@ ol.without-list-style li::before {
   padding: 0;
   padding-inline-start: 1rem;
 }
+
 .article-table-of-content nav > ul ul {
   padding-inline-start: 1rem;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre {
   border: 1px solid #302d3f;
   background: transparent !important;
   padding: .5em;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: "Cascadia Code", "Fira Code", monospace;
 }
 
 .logo-container img {
@@ -330,7 +338,7 @@ pre, code, .blob-code-inner {
   padding: 1px 1.2rem;
   border-inline-start-width: 3px;
   border-inline-start-style: solid;
-  border-inline-start-color: var(--border-color, #fff);
+  border-inline-start-color: var(--border-color, #ffffff);
   background-color: var(--background-color, transparent);
   position: relative;
   margin-block: 1rem;
@@ -349,25 +357,45 @@ pre, code, .blob-code-inner {
 }
 
 .alert.note {
-  --border-color:      hsl(244.7, 76.8%, 54.3%);
+  --border-color: hsl(244.7, 76.8%, 54.3%);
   --background-color: hsla(244.7, 76.8%, 54.3%, 0.23);
   --icon: '📄';
 }
 
 .alert.tip {
-  --border-color:      hsl(45.2, 74.9%, 50%);
+  --border-color: hsl(45.2, 74.9%, 50%);
   --background-color: hsla(45.2, 74.9%, 50%, 0.23);
   --icon: '🔎';
 }
 
 .alert.warning {
-  --border-color:      hsl(25.5, 76.8%, 54.3%);
+  --border-color: hsl(25.5, 76.8%, 54.3%);
   --background-color: hsla(25.5, 76.8%, 54.3%, 0.23);
   --icon: '⚠️';
 }
 
 .alert.error {
-  --border-color:      hsl(0, 65.9%, 58.6%);
+  --border-color: hsl(0, 65.9%, 58.6%);
   --background-color: hsla(0, 65.9%, 58.6%, 0.32);
   --icon: '⛔️';
+}
+
+pre code {
+  background: transparent;
+  color: white;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-results-container {
+  position: absolute;
+  background-color: #2c2748;
+  z-index: 1;
+  padding-inline: 1rem;
+}
+
+.search-result-content ul {
+  padding-inline-start: 1.4rem;
 }
