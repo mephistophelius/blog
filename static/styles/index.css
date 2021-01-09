@@ -399,3 +399,7 @@ pre code {
 .search-result-content ul {
   padding-inline-start: 1.4rem;
 }
+
+.article-thumbnail {
+  margin-block-start: 1rem;
+}
