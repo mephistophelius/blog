@@ -6,3 +6,7 @@ author: "Сэм Булатов"
 ---
 
 ## Hello
+
+![](/static/articles/my-second-post/images/test.png)
+
+{% figure "/static/articles/my-second-post/images/test.png", "Тестовое описание картинки" %}

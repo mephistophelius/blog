@@ -78,6 +78,13 @@ function buildEleventyConfig(config) {
     </div>`;
   });
   
+  config.addNunjucksShortcode('figure', (src, caption) => {
+    return `<figure>
+      <img src="${ src }" alt="${ caption }">
+      <figcaption>${ caption }</figcaption>
+    </figure>`
+  })
+  
   config.addNunjucksFilter('readingTime', (content) => {
     const contentType = typeof content;
     
