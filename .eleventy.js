@@ -111,7 +111,7 @@ function buildEleventyConfig(config) {
     
     templateCollection.getAll().forEach((item) => {
       if ('type' in item.data) {
-        if (item.data.type === 'article') {
+        if (item.data.type === 'article' && item.data.draft) {
           articles.push(item);
         }
       }
