@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="{{ '/static/styles/base.css' | url }}">
     <link rel="stylesheet" href="{{ '/static/styles/index.css' | url }}">
 
-    <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<!--    <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>-->
     <script src="{{ '/static/scripts/prism.js' | url }}"></script>
-    <script>mediumZoom('.zoomable img');</script>
+<!--    <script>mediumZoom('.zoomable img');</script>-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HY7FFQQCX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9HY7FFQQCX');
+    </script>
   </head>
   <body class='body'>
     <header class='header is-has-max-width'>
