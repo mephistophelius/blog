@@ -3,6 +3,13 @@ layout: layouts/base.njk
 ---
 
 <section class="article-header">
+
+  {% if thumbnail %}
+  <div class="article-thumbnail">
+    <img src="{{ thumbnail }}" alt="Миниатюра статьи">
+  </div>
+  {% endif %}
+
   <h1 class="article-title">{{ title }}</h1>
 
   <div class="article-info">

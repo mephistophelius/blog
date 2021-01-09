@@ -6,8 +6,9 @@ author: "Сэм Булатов"
 tags:
   - css
 commentsEnable: true
+thumbnail: /static/articles/my-second-post/images/test.png
+draft: true
 ---
-
 
 **Note:** This document is itself written using Markdown; you
 can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
