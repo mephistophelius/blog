@@ -1,6 +1,12 @@
 # История изменений
 
-## [2.1.0](https://github.com/mephistorine/blog/compare/v2.0.0...v2.1.0) (08.01.2021)
+## [2.2.0](https://github.com/mephistorine/blog/compare/v2.1.0...v2.2.0) (09.01.2021)
+
+### Добавлено
+
+- site: Google аналитика ([fbf83743](https://github.com/mephistorine/blog/commit/fbf83743))
+
+## [2.1.0](https://github.com/mephistorine/blog/compare/v2.0.0...v2.1.0) (09.01.2021)
 
 ### Добавлено
 
