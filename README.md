@@ -69,5 +69,3 @@ yarn build
 - Telegram: [@mephistorine](https://t.me/mephistorine)
 
 - Twitter: [@mephistorine](https://twitter.com/mephistorine)
-
-Project Link: [https://github.com/mephistorine/blog](https://github.com/mephistorine/blog)
